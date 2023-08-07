@@ -37,11 +37,11 @@ Derived assets, such as `thor.btc` and`thor.tor`, are algorithmic coins that are
 
 TOR (`thor.tor`) is a non-transferable unit of account within THORChain designed to match the value of $1 USD and has been in use since [ADR 003](https://gitlab.com/thorchain/thornode/-/blob/develop/docs/architecture/adr-003-flooredoutboundfee.md). It cannot be exported anywhere and always has a market cap of $0. TOR is valued by taking the median price of the active USD pools.
 
-All collateral, debit and repayments within Lending are converted to and accounted for in TOR.
+All collateral, debt and repayments within Lending are converted to and accounted for in TOR.
 
 #### Open Loan Flow
 
-The user provides Bticoin collateral and can receive the debit in any asset however it is all accounted for in TOR.
+The user provides Bticoin collateral and can receive the debt in any asset however it is all accounted for in TOR.
 
 1. User sends in collateral (BTC.BTC -> Rune, Rune -> thor.btc)
 2. thor.btc is held as collateral in the Lending module
@@ -151,9 +151,9 @@ $$
 As more loans are taken out, the collateral limits are increased and so does the CR. The higher the collateralization ratio, the safer the system becomes.
 {% endhint %}
 
-### Debit
+### Debt
 
-Debit is calculated based on the collateral provided and the CR of the pool.
+Debt is calculated based on the collateral provided and the CR of the pool.
 
 | Element              | Description             |
 | -------------------- | ----------------------- |
@@ -163,7 +163,7 @@ Debit is calculated based on the collateral provided and the CR of the pool.
 
 
 $$
-Debit = CollateralValueInTOR * \frac{10,000}{CR}
+Debt = CollateralValueInTOR * \frac{10,000}{CR}
 $$
 
 The TOR Debt is swapped to the requested L1 asset and then sent to the user, slip fees apply.
