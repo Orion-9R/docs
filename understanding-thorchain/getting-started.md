@@ -72,6 +72,8 @@ You can see your position if you connect to THORChain via an Interface you can u
 
 Below provides a starting point, see [Wallets ](../ecosystem.md#wallets)and [Exchanges ](../ecosystem.md#exchanges)for a full list.&#x20;
 
+> ⚠️ THORChain Does not support BTC Taproot at this time. User funds will be lost!
+
 ### Wallets and Exchanges
 
 #### [**XDEFI**](https://www.xdefi.io/)
